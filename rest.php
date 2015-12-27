@@ -10,6 +10,6 @@ if($rst = mysqli_query($con,$sql))
 									"p"=>$rst["pressure"],
 									"h"=>$rst["humidity"]];			
 	}
-	return 	json_decode(return_ary);				
-
+	echo json_decode(return_ary);				
+	return;
 ?>
