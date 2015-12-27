@@ -1,12 +1,5 @@
 <?php
-
-
-$con = mysqli_connect('localhost','root','lifebuoy');
-define("APIKEY","cg123");
-
-if(!mysqli_connect_error())
-{
-	mysqli_select_db($con,"stormy");
+include_once "settings.php";
 
 	if(isset($_REQUEST["apikey"]) && $_REQUEST["apikey"] == APIKEY)
 	$sql = "insert into localsensors
@@ -25,7 +18,7 @@ if(!mysqli_connect_error())
 	}
 	mysqli_close($con);
 
-}
+ 
 
 
 echo "failed";
